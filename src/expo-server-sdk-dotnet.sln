@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29201.188
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "expo-server-sdk-dotnet", "expo-server-sdk-dotnet.csproj", "{53D56011-7CBE-4AF7-9A2C-7AEC757FAACB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests.expo-server-sdk-dotnet", "Tests.expo-server-sdk-dotnet\Tests.expo-server-sdk-dotnet.csproj", "{278C85E0-8234-43C2-8258-CF8DD2CE3F90}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{53D56011-7CBE-4AF7-9A2C-7AEC757FAACB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53D56011-7CBE-4AF7-9A2C-7AEC757FAACB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53D56011-7CBE-4AF7-9A2C-7AEC757FAACB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53D56011-7CBE-4AF7-9A2C-7AEC757FAACB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{278C85E0-8234-43C2-8258-CF8DD2CE3F90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{278C85E0-8234-43C2-8258-CF8DD2CE3F90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{278C85E0-8234-43C2-8258-CF8DD2CE3F90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{278C85E0-8234-43C2-8258-CF8DD2CE3F90}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C8B05C65-9A21-4DC8-84E9-C3EC4CE42433}
+	EndGlobalSection
+EndGlobal
