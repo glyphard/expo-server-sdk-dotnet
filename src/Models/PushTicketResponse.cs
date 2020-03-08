@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace expo_server_sdk_dotnet.Models
+namespace Expo.Server.Models
 {
     [JsonObject(MemberSerialization.OptIn)]
     public class PushTicketResponse

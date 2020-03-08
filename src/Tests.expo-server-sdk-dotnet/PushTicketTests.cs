@@ -1,5 +1,5 @@
-using expo_server_sdk_dotnet.Client;
-using expo_server_sdk_dotnet.Models;
+using Expo.Server.Client;
+using Expo.Server.Models;
 using NUnit.Framework;
 using System;
 using System.Collections.Generic;
@@ -13,14 +13,15 @@ namespace Tests
         [SetUp]
         public void Setup()
         {
+
         }
 
         [Category("Harness")]
         [Test]
         public void TestPushTicketRequest()
         {
-            var expoSDKClient = new expo_server_sdk_dotnet.Client.PushApiClient();
-            var pushTicketReq = new expo_server_sdk_dotnet.Models.PushTicketRequest() {
+            var expoSDKClient = new Expo.Server.Client.PushApiClient();
+            var pushTicketReq = new Expo.Server.Models.PushTicketRequest() {
                 PushTo = new List<string>() { "..." },
                 PushBadgeCount = 7,
                 PushBody = "Test Push - Msg"
@@ -38,7 +39,7 @@ namespace Tests
 
             foreach (var ticketStatus in result.PushTicketStatuses) {
                 Console.WriteLine($"TicketId & Status: {ticketStatus.TicketId} = {ticketStatus.TicketStatus}, {ticketStatus.TicketMessage}");
-                var pushReceiptReq = new expo_server_sdk_dotnet.Models.PushReceiptRequest()
+                var pushReceiptReq = new Expo.Server.Models.PushReceiptRequest()
                 {
                     PushTicketIds = new List<string>() { "..." }
                 };

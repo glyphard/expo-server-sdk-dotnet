@@ -1,4 +1,4 @@
-﻿using expo_server_sdk_dotnet.Models;
+﻿using Expo.Server.Models;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -7,7 +7,7 @@ using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace expo_server_sdk_dotnet.Client
+namespace Expo.Server.Client
 {
     public class PushApiClient
     {
@@ -18,14 +18,16 @@ namespace expo_server_sdk_dotnet.Client
 
         //Make this static to avoid socket saturation
         private static readonly HttpClient _httpClient = new HttpClient();
-        static PushApiClient() {
+        static PushApiClient()
+        {
             _httpClient.BaseAddress = new Uri(_expoBackendHost);
             _httpClient.DefaultRequestHeaders.Accept.Clear();
             _httpClient.DefaultRequestHeaders.Accept.Add(
                 new MediaTypeWithQualityHeaderValue("application/json"));
         }
 
-        public async Task<PushTicketResponse> PushSendAsync(PushTicketRequest pushTicketRequest){
+        public async Task<PushTicketResponse> PushSendAsync(PushTicketRequest pushTicketRequest)
+        {
             var ticketResponse = await PostAsync<PushTicketRequest, PushTicketResponse>(pushTicketRequest, _pushSendPath);
             return ticketResponse;
         }
@@ -36,7 +38,8 @@ namespace expo_server_sdk_dotnet.Client
             return receiptResponse;
         }
 
-        public async Task<U>  PostAsync<T,U>(T requestObj, string path) where T : new() {
+        public async Task<U> PostAsync<T, U>(T requestObj, string path) where T : new()
+        {
 
             var serializedRequestObj = JsonConvert.SerializeObject(requestObj, new JsonSerializerSettings
             {
@@ -49,15 +52,10 @@ namespace expo_server_sdk_dotnet.Client
             if (response.IsSuccessStatusCode)
             {
                 var rawResponseBody = await response.Content.ReadAsStringAsync();
-                responseBody = JsonConvert.DeserializeObject<U>( rawResponseBody );
-            }
-            else {
-                
-
+                responseBody = JsonConvert.DeserializeObject<U>(rawResponseBody);
             }
 
             return responseBody;
         }
-
     }
 }

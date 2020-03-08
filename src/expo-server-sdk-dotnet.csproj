@@ -2,13 +2,29 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
-    <RootNamespace>expo_server_sdk_dotnet</RootNamespace>
+    <RootNamespace>Expo.Server</RootNamespace>
+    <Authors>Ashley Messer</Authors>
+    <Company></Company>
+    <Description>Expo Server SDK Client for dotnet Push notifications</Description>
+    <Copyright>2020</Copyright>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <RepositoryUrl>https://github.com/glyphard/expo-server-sdk-dotnet</RepositoryUrl>
+    <PackageTags>expo push notifications</PackageTags>
+    <PackageId>Expo.Server.SDK</PackageId>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <AssemblyName>Expo.Server.SDK</AssemblyName>
+    <PackageReleaseNotes>validated implementation</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
     <Compile Remove="Tests.expo-server-sdk-dotnet\**" />
     <EmbeddedResource Remove="Tests.expo-server-sdk-dotnet\**" />
     <None Remove="Tests.expo-server-sdk-dotnet\**" />
+    <None Include="..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
   </ItemGroup>
 
   <ItemGroup>

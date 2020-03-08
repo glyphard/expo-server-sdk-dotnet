@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>Expo.Server.SDK</id>
+    <version>1.0.0</version>
+    <authors>Ashley Messer</authors>
+    <owners>Ashley Messer</owners>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <license type="file">LICENSE</license>
+    <licenseUrl>https://aka.ms/deprecateLicenseUrl</licenseUrl>
+    <title>Expo Server SDK Client</title>
+    <description>Expo Server SDK Client for Push notifications</description>
+    <language>en-US</language>
+    <description>Expo Server SDK Client for Push notifications</description>
+    <releaseNotes>validated implementation</releaseNotes>
+    <copyright>2020</copyright>
+    <tags>expo push notifications</tags>
+    <repository url="https://github.com/glyphard/expo-server-sdk-dotnet" />
+    <dependencies>
+      <group targetFramework=".NETCoreApp2.2">
+        <dependency id="Newtonsoft.Json" version="12.0.3" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="C:\projects\acnscratch\expo-server-sdk-dotnet\expo-server-sdk-dotnet\src\bin\Release\netcoreapp2.2\Expo.Server.SDK.dll" target="lib\netcoreapp2.2\Expo.Server.SDK.dll" />
+    <file src="C:\projects\acnscratch\expo-server-sdk-dotnet\expo-server-sdk-dotnet\LICENSE" target="LICENSE" />
+  </files>
+</package>
