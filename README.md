@@ -59,7 +59,7 @@ using System.Linq;
 	foreach (var pushReceipt in pushReceiptResult.PushTicketReceipts) {
 		Console.WriteLine($"TicketId & Delivery Status: {pushReceipt.Key} {pushReceipt.Value.DeliveryStatus} {pushReceipt.Value.DeliveryMessage}");
 	}
-
+```
 
 
 ## Developing
