@@ -28,8 +28,10 @@ namespace Tests
             };
             var result = expoSDKClient.PushSendAsync(pushTicketReq).GetAwaiter().GetResult();
 
-            if (result?.PushTicketErrors?.Count() > 0) {
-                foreach (var error in result.PushTicketErrors) {
+            if (result?.PushTicketErrors?.Count() > 0) 
+            {
+                foreach (var error in result.PushTicketErrors) 
+                {
                     Console.WriteLine($"Error: {error.ErrorCode} - {error.ErrorMessage}");
                 }
             }
@@ -37,7 +39,8 @@ namespace Tests
             ///If no errors, then wait for a the notifications to be delivered
             
 
-            foreach (var ticketStatus in result.PushTicketStatuses) {
+            foreach (var ticketStatus in result.PushTicketStatuses) 
+            {
                 Console.WriteLine($"TicketId & Status: {ticketStatus.TicketId} = {ticketStatus.TicketStatus}, {ticketStatus.TicketMessage}");
                 var pushReceiptReq = new Expo.Server.Models.PushReceiptRequest()
                 {
@@ -64,7 +67,8 @@ namespace Tests
 
             var result = expoSDKClient.PushGetReceiptsAsync(pushReceiptReq).GetAwaiter().GetResult();
 
-            if (result?.ErrorInformations?.Count() > 0) {
+            if (result?.ErrorInformations?.Count() > 0) 
+            {
                 foreach (var error in result.ErrorInformations) {
                     Console.WriteLine($"Error: {error.ErrorCode} - {error.ErrorMessage}");
                 }

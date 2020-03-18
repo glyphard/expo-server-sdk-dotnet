@@ -22,8 +22,10 @@ using System.Linq;
 	};
 	var result = expoSDKClient.PushSendAsync(pushTicketReq).GetAwaiter().GetResult();
 
-	if (result?.PushTicketErrors?.Count() > 0) {
-		foreach (var error in result.PushTicketErrors) {
+	if (result?.PushTicketErrors?.Count() > 0) 
+	{
+		foreach (var error in result.PushTicketErrors) 
+		{
 			Console.WriteLine($"Error: {error.ErrorCode} - {error.ErrorMessage}");
 		}
 	}
@@ -51,12 +53,15 @@ using System.Linq;
 
 	var pushReceiptResult = expoSDKClient.PushGetReceiptsAsync(pushReceiptReq).GetAwaiter().GetResult();
 
-	if (pushReceiptResult?.ErrorInformations?.Count() > 0) {
-		foreach (var error in result.ErrorInformations) {
+	if (pushReceiptResult?.ErrorInformations?.Count() > 0) 
+	{
+		foreach (var error in result.ErrorInformations) 
+		{
 			Console.WriteLine($"Error: {error.ErrorCode} - {error.ErrorMessage}");
 		}
 	}
-	foreach (var pushReceipt in pushReceiptResult.PushTicketReceipts) {
+	foreach (var pushReceipt in pushReceiptResult.PushTicketReceipts) 
+	{
 		Console.WriteLine($"TicketId & Delivery Status: {pushReceipt.Key} {pushReceipt.Value.DeliveryStatus} {pushReceipt.Value.DeliveryMessage}");
 	}
 
@@ -75,6 +80,7 @@ To build, use the .sln and msbuild
 
 ## See Also
 
+  * https://docs.expo.io/versions/latest/guides/push-notifications/
   * https://github.com/expo/expo-server-sdk-node
   * https://github.com/expo/expo-server-sdk-ruby
   * https://github.com/expo/expo-server-sdk-python

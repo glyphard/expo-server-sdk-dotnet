@@ -16,8 +16,9 @@ namespace Expo.Server.Client
         private const string _pushSendPath = "/--/api/v2/push/send";
         private const string _pushGetReceiptsPath = "/--/api/v2/push/getReceipts";
 
-        //Make this static to avoid socket saturation
-        private static readonly HttpClient _httpClient = new HttpClient();
+        //Make this static to avoid socket saturation and limit concurrent server connections to 6, but only for instances of this class.
+        private static readonly HttpClientHandler _httpHandler = new HttpClientHandler() { MaxConnectionsPerServer = 6 };
+        private static readonly HttpClient _httpClient = new HttpClient(_httpHandler);
         static PushApiClient()
         {
             _httpClient.BaseAddress = new Uri(_expoBackendHost);

@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
   <metadata>
     <id>Expo.Server.SDK</id>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <authors>Ashley Messer</authors>
     <owners>Ashley Messer</owners>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
