@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
   <metadata>
     <id>Expo.Server.SDK</id>
-    <version>1.0.1</version>
+    <version>1.0.2</version>
     <authors>Ashley Messer</authors>
     <owners>Ashley Messer</owners>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
@@ -20,10 +20,14 @@
       <group targetFramework=".NETCoreApp2.2">
         <dependency id="Newtonsoft.Json" version="12.0.3" exclude="Build,Analyzers" />
       </group>
+      <group targetFramework=".NETStandard2.0">
+        <dependency id="Newtonsoft.Json" version="12.0.3" exclude="Build,Analyzers" />
+      </group>
     </dependencies>
   </metadata>
   <files>
     <file src="C:\projects\acnscratch\expo-server-sdk-dotnet\expo-server-sdk-dotnet\src\bin\Release\netcoreapp2.2\Expo.Server.SDK.dll" target="lib\netcoreapp2.2\Expo.Server.SDK.dll" />
+    <file src="C:\projects\acnscratch\expo-server-sdk-dotnet\expo-server-sdk-dotnet\src\bin\Release\netstandard2.0\Expo.Server.SDK.dll" target="lib\netstandard2.0\Expo.Server.SDK.dll" />
     <file src="C:\projects\acnscratch\expo-server-sdk-dotnet\expo-server-sdk-dotnet\LICENSE" target="LICENSE" />
   </files>
 </package>
