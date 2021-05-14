@@ -20,7 +20,7 @@ using System.Linq;
 		PushBadgeCount = 7,
 		PushBody = "Test Push - Msg"
 	};
-	var result = expoSDKClient.PushSendAsync(pushTicketReq).GetAwaiter().GetResult();
+	var result = await expoSDKClient.PushSendAsync(pushTicketReq);
 
 	if (result?.PushTicketErrors?.Count() > 0) 
 	{
@@ -51,7 +51,7 @@ using System.Linq;
 // your app. Expo does not control this policy and sends back the feedback from
 // Apple and Google so you can handle it appropriately.
 
-	var pushReceiptResult = expoSDKClient.PushGetReceiptsAsync(pushReceiptReq).GetAwaiter().GetResult();
+	var pushReceiptResult = await expoSDKClient.PushGetReceiptsAsync(pushReceiptReq);
 
 	if (pushReceiptResult?.ErrorInformations?.Count() > 0) 
 	{
