@@ -6,7 +6,7 @@ using System.Text;
 namespace Expo.Server.Models
 {
     [JsonObject(MemberSerialization.OptIn)]
-    public class PushResceiptResponse
+    public class PushReceiptResponse
     {
         [JsonProperty(PropertyName = "data")]
         public Dictionary<string,PushTicketDeliveryStatus> PushTicketReceipts { get; set; }
