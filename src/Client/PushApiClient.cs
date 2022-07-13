@@ -41,9 +41,9 @@ namespace Expo.Server.Client
             return ticketResponse;
         }
 
-        public async Task<PushResceiptResponse> PushGetReceiptsAsync(PushReceiptRequest pushReceiptRequest)
+        public async Task<PushReceiptResponse> PushGetReceiptsAsync(PushReceiptRequest pushReceiptRequest)
         {
-            var receiptResponse = await PostAsync<PushReceiptRequest, PushResceiptResponse>( pushReceiptRequest, _pushGetReceiptsPath );
+            var receiptResponse = await PostAsync<PushReceiptRequest, PushReceiptResponse>( pushReceiptRequest, _pushGetReceiptsPath );
             return receiptResponse;
         }
 

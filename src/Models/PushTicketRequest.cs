@@ -40,5 +40,8 @@ namespace Expo.Server.Models
 
         [JsonProperty(PropertyName = "channelId")]
         public string PushChannelId { get; set; }
+
+        [JsonProperty(PropertyName = "categoryId")]
+        public string PushCategoryId { get; set; }
     }
 }
