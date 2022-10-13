@@ -3,6 +3,10 @@ Server-side library for working with Expo using dot-net.
 
 If you have problems with the code in this repository, please file an issue.
 
+[![license](https://img.shields.io/badge/license-MIT-orange.svg?style=flat-square)](https://github.com/glyphard/expo-server-sdk-dotnet/blob/master/LICENSE) 
+[![.NET](https://img.shields.io/badge/Standard-blue.svg?logo=.net&style=flat-square)](https://docs.microsoft.com/it-it/dotnet/standard/net-standard) 
+[![Nuget](https://img.shields.io/nuget/v/Expo.Server.SDK?label=%20&logo=nuget&style=flat-square)](https://www.nuget.org/packages/Expo.Server.SDK/)
+
 ## Usage
 
 
