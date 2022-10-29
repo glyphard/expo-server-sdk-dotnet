@@ -55,16 +55,12 @@ namespace Expo.Server.Client
                 NullValueHandling = NullValueHandling.Ignore
             });
             var requestBody = new StringContent(serializedRequestObj, System.Text.Encoding.UTF8, "application/json");
-            var responseBody = default(U);
             var response = await _httpClient.PostAsync(path, requestBody);
 
-            if (response.IsSuccessStatusCode)
-            {
-                var rawResponseBody = await response.Content.ReadAsStringAsync();
-                responseBody = JsonConvert.DeserializeObject<U>(rawResponseBody);
-            }
+            response.EnsureSuccessStatusCode();
 
-            return responseBody;
+            var rawResponseBody = await response.Content.ReadAsStringAsync();
+            return JsonConvert.DeserializeObject<U>(rawResponseBody);
         }
     }
 }
