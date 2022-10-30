@@ -2,6 +2,7 @@
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
@@ -49,13 +50,18 @@ namespace Expo.Server.Client
 
         public async Task<U> PostAsync<T, U>(T requestObj, string path) where T : new()
         {
-
             var serializedRequestObj = JsonConvert.SerializeObject(requestObj, new JsonSerializerSettings
             {
                 NullValueHandling = NullValueHandling.Ignore
             });
             var requestBody = new StringContent(serializedRequestObj, System.Text.Encoding.UTF8, "application/json");
             var response = await _httpClient.PostAsync(path, requestBody);
+            
+            if (response.StatusCode == HttpStatusCode.BadRequest)
+            {
+                var errorResponse = await response.Content.ReadAsStringAsync();
+                return JsonConvert.DeserializeObject<U>(errorResponse);
+            }
 
             response.EnsureSuccessStatusCode();
 

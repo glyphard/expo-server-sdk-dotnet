@@ -37,5 +37,9 @@ namespace Expo.Server.Models {
 
         [JsonProperty (PropertyName = "message")]
         public string ErrorMessage { get; set; }
+
+        [JsonProperty (PropertyName = "details")]
+        public object TicketDetails { get; set; }
+
     }
 }
