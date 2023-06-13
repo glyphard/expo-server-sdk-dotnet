@@ -43,5 +43,8 @@ namespace Expo.Server.Models
 
         [JsonProperty(PropertyName = "categoryId")]
         public string PushCategoryId { get; set; }
+
+        [JsonProperty(PropertyName = "_contentAvailable")]
+        public bool PushContentAvailable { get; set; }
     }
 }
